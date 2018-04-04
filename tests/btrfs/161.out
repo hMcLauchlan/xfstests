@@ -1,0 +1,38 @@
+QA output created by 161
+wrote 32768/32768 bytes at offset 0
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+post-send file digest for old_parent:
+c28418534a020122aca59fd3ff9581b5  SCRATCH_MNT/old_parent/foo
+post-send file flag for old_parent:
+-----a------------ SCRATCH_MNT/receive/old_parent/foo
+wrote 32768/32768 bytes at offset 0
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+post-send file digest for child_1:
+8e3ba8330fc5309ed7d2f447c13d9e71  SCRATCH_MNT/child_1/foo
+post-send file flag for child_1:
+-----a------------ SCRATCH_MNT/receive/child_1/foo
+wrote 32768/32768 bytes at offset 0
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+post-send file digest for child_2:
+5671126b7326949ea0f14d5a875084ac  SCRATCH_MNT/child_2/foo
+post-send file flag for child_2:
+------d----------- SCRATCH_MNT/receive/child_2/foo
+post-send file flag for child_3:
+-----ad----------- SCRATCH_MNT/receive/child_3/foo
+post-send xattr for child_3:
+# file: SCRATCH_MNT/receive/child_3/foo
+user.test=0sqqo=
+
+post-send file flag for child_4:
+-----ad----------- SCRATCH_MNT/receive/child_4/foo
+post-send xattr for child_4:
+# file: SCRATCH_MNT/receive/child_4/foo
+user.test=0szMw=
+user.test_1=0su7s=
+
+wrote 131072/131072 bytes at offset 65536
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+wrote 1081344/1081344 bytes at offset 1048576
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+post-send file flag for child_5:
+-----ad----------- SCRATCH_MNT/receive/child_5/foo
