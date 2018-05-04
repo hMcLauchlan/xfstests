@@ -1,0 +1,42 @@
+QA output created by 162
+wrote 300000/300000 bytes at offset 0
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+wrote 1000/1000 bytes at offset 120000
+XXX Bytes, X ops; XX:XX:XX.X (XXX YYY/sec and XXX ops/sec)
+5a88aa0da62c8999c16515050947a70a  SCRATCH_MNT/mysnap2/foo
+Whence	Result
+DATA	0
+HOLE	102400
+DATA	118784
+HOLE	122880
+DATA	147456
+HOLE	253952
+DATA	266240
+HOLE	300000
+0: [0..199]: data
+1: [200..231]: unwritten
+2: [232..239]: data
+3: [240..287]: unwritten
+4: [288..495]: data
+5: [496..519]: hole
+6: [520..591]: data
+7: [592..2543]: unwritten
+8: [2544..17575]: hole
+9: [17576..21487]: unwritten
+5a88aa0da62c8999c16515050947a70a  SCRATCH_MNT/mysnap2/foo
+Whence	Result
+DATA	0
+HOLE	102400
+DATA	118784
+HOLE	122880
+DATA	147456
+HOLE	253952
+DATA	266240
+HOLE	300000
+0: [0..199]: data
+1: [200..231]: unwritten
+2: [232..239]: data
+3: [240..287]: unwritten
+4: [288..495]: data
+5: [496..519]: hole
+6: [520..591]: data

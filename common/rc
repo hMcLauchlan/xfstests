@@ -3788,6 +3788,16 @@ _require_scratch_feature()
 	esac
 }
 
+_require_btrfs_stream_version_2()
+{
+	$BTRFS_UTIL_PROG send 2>&1 | \
+		grep '^[ \t]*\--stream-version[ \t]\+.*' > /dev/null 2>&1
+	if [ $? -ne 0 ]; then
+		_notrun "Missing btrfs-progs send -a command line option, skipped this test"
+	fi
+}
+
+
 init_rc
 
 ################################################################################

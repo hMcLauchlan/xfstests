@@ -94,7 +94,7 @@ $CHATTR_PROG +a $SCRATCH_MNT/parent/foo
 # Send/Receive initial snapshot
 _run_btrfs_util_prog subvolume snapshot -r $SCRATCH_MNT/parent \
 	$SCRATCH_MNT/old_parent
-_run_btrfs_util_prog send --stream-version 2 -f $SCRATCH_MNT/out $SCRATCH_MNT/old_parent
+_run_btrfs_util_prog send -s --stream-version 2 -f $SCRATCH_MNT/out $SCRATCH_MNT/old_parent
 _run_btrfs_util_prog receive -f $SCRATCH_MNT/out $SCRATCH_MNT/receive
 
 # Verify post-send content and flags
@@ -111,7 +111,7 @@ $CHATTR_PROG +a $SCRATCH_MNT/parent/foo
 # Send incremental change
 _run_btrfs_util_prog subvolume snapshot -r $SCRATCH_MNT/parent \
 	$SCRATCH_MNT/child_1
-_run_btrfs_util_prog send --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
+_run_btrfs_util_prog send -s --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
 $SCRATCH_MNT/child_1
 _run_btrfs_util_prog receive -f $SCRATCH_MNT/out $SCRATCH_MNT/receive
 
@@ -129,7 +129,7 @@ $CHATTR_PROG +d $SCRATCH_MNT/parent/foo
 # Send incremental change
 _run_btrfs_util_prog subvolume snapshot -r $SCRATCH_MNT/parent \
 	$SCRATCH_MNT/child_2
-_run_btrfs_util_prog send --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
+_run_btrfs_util_prog send -s --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
 $SCRATCH_MNT/child_2
 _run_btrfs_util_prog receive -f $SCRATCH_MNT/out $SCRATCH_MNT/receive
 
@@ -146,7 +146,7 @@ $CHATTR_PROG +a $SCRATCH_MNT/parent/foo
 # Send incremental change against child_2
 _run_btrfs_util_prog subvolume snapshot -r $SCRATCH_MNT/parent \
 	$SCRATCH_MNT/child_3
-_run_btrfs_util_prog send --stream-version 2 -p $SCRATCH_MNT/child_2 -f $SCRATCH_MNT/out \
+_run_btrfs_util_prog send -s --stream-version 2 -p $SCRATCH_MNT/child_2 -f $SCRATCH_MNT/out \
 $SCRATCH_MNT/child_3
 _run_btrfs_util_prog receive -f $SCRATCH_MNT/out $SCRATCH_MNT/receive
 
@@ -166,7 +166,7 @@ $CHATTR_PROG +a $SCRATCH_MNT/parent/foo
 # Send incremental change
 _run_btrfs_util_prog subvolume snapshot -r $SCRATCH_MNT/parent \
 	$SCRATCH_MNT/child_4
-_run_btrfs_util_prog send --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
+_run_btrfs_util_prog send -s --stream-version 2 -p $SCRATCH_MNT/old_parent -f $SCRATCH_MNT/out \
 $SCRATCH_MNT/child_4
 _run_btrfs_util_prog receive -f $SCRATCH_MNT/out $SCRATCH_MNT/receive
 
